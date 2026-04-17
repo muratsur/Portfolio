@@ -1,0 +1,35 @@
+pipeline {
+  agent any
+  environment {
+    NODE_ENV_PATH = './venv'
+    NODE_VERSION = '6.11.1'
+  }
+  stages {
+    stage('Pre-cleanup') {
+      steps {
+      }
+    }
+    stage('Make venv') {
+      steps {
+      }
+    }
+    stage('Install dependencies') {
+      steps {
+        
+      }
+    }
+    stage('Run tests') {
+      steps {
+        
+      }
+    }
+  }//jenkinsfile
+  post {
+    failure {
+      echo 'Processing failed'
+    }
+    success {
+      echo 'Processing succeeded'
+    }
+  }
+}
